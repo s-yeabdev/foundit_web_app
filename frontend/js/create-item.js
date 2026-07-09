@@ -1,7 +1,7 @@
-// Create item page functionality
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Check authentication
+    
     if (!requireAuth()) return;
 
     

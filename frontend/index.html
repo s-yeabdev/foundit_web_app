@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoundIt - Campus Lost & Found</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">FoundIt</a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="create-item.html">Post Item</a>
+                <a href="my-items.html">My Items</a>
+                <span class="nav-auth" id="authLinks">
+                    <a href="login.html">Login</a>
+                    <a href="register.html" class="btn-primary-small">Register</a>
+                </span>
+                <span class="nav-auth" id="userInfo" style="display: none;">
+                    <span class="username-display" id="usernameDisplay"></span>
+                    <button class="btn-logout" id="logoutBtn">Logout</button>
+                </span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Find What You've Lost</h1>
+                <p>Lost something on campus? Found an item? Post it here and help your fellow students.</p>
+                <div class="hero-actions">
+                    <a href="create-item.html" class="btn-primary">Post an Item</a>
+                    <a href="#items-section" class="btn-secondary">Browse Items</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section" id="items-section">
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search items by title..." class="search-input">
+                    <div class="search-filters">
+                        <select id="filterType" class="filter-select">
+                            <option value="">All Types</option>
+                            <option value="Lost">Lost</option>
+                            <option value="Found">Found</option>
+                        </select>
+                        <button id="searchBtn" class="btn-search">Search</button>
+                        <button id="clearSearchBtn" class="btn-clear">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="items-section">
+            <div id="message" class="message"></div>
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading items...</p>
+            </div>
+            <div class="items-grid" id="itemsGrid">
+                
+            </div>
+            <div class="no-items" id="noItems" style="display: none;">
+                <p>No items found. Be the first to post!</p>
+                <a href="create-item.html" class="btn-primary" style="margin-top: 1rem;">Post an Item</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 FoundIt - Campus Lost & Found System</p>
+            <p>Helping students find what they've lost</p>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

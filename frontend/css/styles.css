@@ -1,0 +1,352 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #FAFAFC; /* Subtly softer canvas color */
+    color: #1D1D1F;
+    line-height: 1.6;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #1D1D1F;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #515154; 
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: #1D1D1F;
+    text-decoration: none;
+    transition: opacity 0.25s ease;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    min-height: calc(100vh - 250px);
+}
+
+
+.navbar {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #E5E5E7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #1D1D1F;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #515154;
+}
+
+.nav-links a:hover {
+    color: #1D1D1F;
+}
+
+.nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.username-display {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1D1D1F;
+}
+
+
+.hero {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    margin-bottom: 3rem;
+}
+
+.hero-content {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+
+.search-section {
+    margin-bottom: 3rem;
+}
+
+.search-container {
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid #E5E5E7;
+}
+
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #D2D2D7;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus {
+    border-color: #0071E3;
+}
+
+.search-filters {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.filter-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #D2D2D7;
+    border-radius: 10px;
+    background: #FFFFFF;
+    font-size: 1rem;
+    outline: none;
+}
+
+
+.btn-primary {
+    display: inline-block;
+    background: #1D1D1F;
+    color: #FFFFFF !important; 
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background: #000000;
+    transform: translateY(-1px);
+}
+
+.btn-primary-small {
+    display: inline-block;
+    background: #1D1D1F;
+    color: #FFFFFF !important; 
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary-small:hover {
+    background: #000000;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: #1D1D1F !important;
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    border: 1px solid #D2D2D7;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background: #F5F5F7;
+}
+
+.btn-search, .btn-clear, .btn-logout {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-search {
+    background: #1D1D1F;
+    color: #FFFFFF;
+    border: none;
+}
+
+.btn-search:hover { background: #000000; }
+
+.btn-clear {
+    background: transparent;
+    color: #1D1D1F;
+    border: 1px solid #D2D2D7;
+}
+
+.btn-clear:hover { background: #F5F5F7; }
+
+.btn-logout {
+    background: none;
+    border: 1px solid #D2D2D7;
+    color: #1D1D1F;
+}
+
+.btn-logout:hover { background: #1D1D1F; color: #FFFFFF; }
+
+
+.items-section {
+    margin-top: 2rem;
+}
+
+.no-items {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #E5E5E7;
+}
+
+
+footer {
+    background: #F5F5F7;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid #E5E5E7;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-content p {
+    color: #86868B;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+
+.message {
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    display: none;
+}
+
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    margin: 2rem auto;
+    border: 3px solid #D2D2D7;
+    border-top: 3px solid #1D1D1F;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search-filters {
+        width: 100%;
+    }
+    .search-filters * {
+        flex: 1;
+    }
+    .hero-actions {
+        flex-direction: column;
+    }
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+}

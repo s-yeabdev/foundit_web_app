@@ -1,0 +1,142 @@
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+
+.item-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #E5E5E7;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+
+.item-image-container {
+    width: 100%;
+    height: 200px;
+    background-color: #F5F5F7;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #E5E5E7;
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    transition: transform 0.3s ease;
+}
+
+.item-card:hover .item-image {
+    transform: scale(1.03);
+}
+
+
+.item-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.badge-lost {
+    background: #FF3B30;
+    color: #FFFFFF;
+}
+
+.badge-found {
+    background: #34C759;
+    color: #FFFFFF;
+}
+
+
+.item-info {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.item-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1D1D1F;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.item-description {
+    font-size: 0.9rem;
+    color: #86868B;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    
+    
+    line-clamp: 2; 
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+
+.item-meta {
+    border-top: 1px solid #F5F5F7;
+    padding-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.meta-row {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #86868B;
+}
+
+.meta-label {
+    font-weight: 500;
+    color: #515154;
+    margin-right: 0.4rem;
+}
+
+
+.btn-view-details {
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+    background: #F5F5F7;
+    color: #1D1D1F;
+    padding: 0.6rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-view-details:hover {
+    background: #1D1D1F;
+    color: #FFFFFF !important;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Item - FoundIt</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">FoundIt</a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="create-item.html">Post Item</a>
+                <a href="my-items.html">My Items</a>
+                <span class="nav-auth" id="authLinks">
+                    <a href="login.html">Login</a>
+                    <a href="register.html" class="btn-primary-small">Register</a>
+                </span>
+                <span class="nav-auth" id="userInfo" style="display: none;">
+                    <span class="username-display" id="usernameDisplay"></span>
+                    <button class="btn-logout" id="logoutBtn">Logout</button>
+                </span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="form-container">
+            <div class="form-card">
+                <h1 id="formTitle">Post New Item</h1>
+                <p class="form-subtitle" id="formSubtitle">Help others find what they've lost or report something you found</p>
+                
+                <form id="createItemForm" class="create-form" enctype="multipart/form-data">
+                    <input type="hidden" id="itemId" value="">
+                    
+                    <div class="form-group">
+                        <label for="type">Item Type</label>
+                        <select id="type" required>
+                            <option value="">Select type...</option>
+                            <option value="Lost">Lost</option>
+                            <option value="Found">Found</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" placeholder="Enter item title" required minlength="3">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" placeholder="Describe the item in detail..." required minlength="10"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <input type="text" id="category" placeholder="e.g., Electronics, Books, Clothing" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="Where was it lost/found?" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Image (Optional)</label>
+                            <input type="file" id="image" accept="image/*">
+                            <span class="file-info">Max file size: 5MB. Supported: JPEG, PNG, GIF, WEBP</span>
+                        </div>
+                    </div>
+                    
+                    <div id="imagePreview" class="image-preview"></div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary" id="submitBtn">Post Item</button>
+                        <a href="index.html" class="btn-secondary">Cancel</a>
+                    </div>
+                    
+                    <div id="message" class="message"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 FoundIt - Campus Lost & Found System</p>
+            <p>Helping students find what they've lost</p>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/create-item.js"></script>
+</body>
+</html>

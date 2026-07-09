@@ -74,8 +74,8 @@ const renderMyItems = (items, gridElement) => {
                     </span>
                 </div>
                 <div class="item-card-meta">
-                    <span>📍 ${escapeHtml(item.location)}</span>
-                    <span>📅 ${formatDate(item.date)}</span>
+                    <span> ${escapeHtml(item.location)}</span>
+                    <span> ${formatDate(item.date)}</span>
                 </div>
                 <div class="item-card-description">
                     ${escapeHtml(truncateText(item.description, 80))}

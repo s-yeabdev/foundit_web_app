@@ -1,0 +1,1 @@
+The uploads folder is a designated local directory where your backend saves image files submitted by users, while your database stores only the file path strings to keep data retrieval fast and lightweight.
